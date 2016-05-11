@@ -1,0 +1,45 @@
+<ion-view title="Livros" id="page2">
+    <ion-content padding="true" class="has-header">
+        <ion-list class="list-livros">
+            <ion-item 
+                ng-repeat="book in books track by $index"
+                class="item-thumbnail-left" 
+                ng-click="detalhe(book)">
+                <img ng-src="{{ book.Image }}" style="height: auto">
+                <div class="row">
+                    <div class="col col-70">
+                        <h2>
+                            {{book.Title}}
+                        </h2>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col">
+                        <p>{{book.Description}}</p>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col col-40">
+                        <strong>{{book.Category}}</strong>
+                    </div>
+                    <!--<div class="col">
+                        <rating ng-model="book.Review" max="5" readonly="readonly"></rating>
+                    </div>-->
+                    <div class="col col-30">
+                        <i class="ion-person-stalker"></i> {{book.Sales}}
+                    </div>
+                    <div class="col col-30">
+                        U$$ {{book.Price}}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <rating ng-model="book.Review" max="5" readonly="readonly"></rating>
+                    </div>
+                </div>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

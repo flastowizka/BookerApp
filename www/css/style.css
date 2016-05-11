@@ -1,0 +1,22 @@
+.platform-ios .manual-ios-statusbar-padding{
+    padding-top:20px;
+}
+.manual-remove-top-padding{
+    padding-top:0px; 
+}
+.manual-remove-top-padding .scroll{
+    padding-top:0px !important;
+}
+
+.rating.ng-valid li {
+    display: inline;
+    color: gold;
+}
+
+.list-livros  img {
+    max-height: 120px !important;
+}
+
+.title.header-item {
+    text-align: center;
+}

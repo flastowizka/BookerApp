@@ -1,0 +1,50 @@
+<ion-view title="Detalhe do livro" id="page4">
+    <ion-content padding="true" class="has-header">
+        <!--<div style="margin: 0px; line-height: 250px; border: 1px solid rgb(238, 238, 238); border-radius: 3px; text-align: center; background-color: rgb(255, 255, 255);">-->
+        <div style="margin: 0px; text-align: center; background-color: rgb(255, 255, 255);">
+            <!--<i class="icon ion-image" style="font-size: 64px; color: rgb(136, 136, 136); vertical-align: middle;"></i>-->
+            <img ng-src="{{ book.Image }}">
+        </div>
+        
+        <button class="button ion-android-cart button-block button-balanced" ng-click="buyBook(book)"> Buy Now</button>
+
+        <div class="list">
+            <a class="item" href="#">
+                Author
+                <span class="item-note">
+                {{book.Author}}
+                </span>
+            </a>
+            <a class="item" href="#">
+                Description
+                <span class="item-note">
+                {{book.Description}}
+                </span>
+            </a>
+            <a class="item" href="#">
+                Category
+                <span class="item-note">
+                {{book.Category}}
+                </span>
+            </a>
+            <a class="item" href="#">
+                Price
+                <span class="item-note">
+                U$$ {{book.Price}}
+                </span>
+            </a>
+            <a class="item" href="#">
+                Sales
+                <span class="item-note">
+                U$$ {{book.Sales}}
+                </span>
+            </a>
+            <a class="item" href="#">
+                Review
+                <span class="item-note">
+                    <rating ng-model="book.Review" max="5" readonly="readonly"></rating>
+                </span>
+            </a>
+        </div>
+    </ion-content>
+</ion-view>
